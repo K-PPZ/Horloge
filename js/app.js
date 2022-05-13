@@ -1,42 +1,31 @@
-let heures = 23;
-let minutes = 59;
-let secondes = 59;
+let min = 24;
+let sec = 59;
 
+let MinutesHaut = document.getElementById("MinutesHaut");
+let MinutesBas = document.getElementById("MinutesBas");
 
-document.getElementById("heures").innerText = heures;
-document.getElementById("minutes").innerText = minutes;
-document.getElementById("secondes").innerText = secondes;
+let SecondesHaut = document.getElementById("SecondesHaut");
+let SecondesBas = document.getElementById("SecondesBas");
+
 
 
 function starthorloge() {
     let decompte = setTimeout("starthorloge()", 1000);
-    secondes -= 1;
-    document.getElementById("secondes").innerText = secondes;
+    sec -= 1;
     
-    if (secondes == 0) {
-        minutes -= 1;
-        document.getElementById("minutes").innerText = minutes;
-        secondes = 59;
+    if (sec == 0) {
+        min -= 1;
+        sec = 59;
     }
 
-    if (minutes == 0) {
-        heures -= 1;
-        document.getElementById("heures").innerText = heures;
-        minutes = 59;
-    }
-
-    if (heures == 0) {
+    if (min == 0) {
+        min = 59;
         restart();
     }
 }
-
+console.log(starthorloge);
 
 function restart() {
-    heures = 23;
-    minutes = 59;
-    secondes = 59;
-
-    document.getElementById("heures").innerText = heures;
-    document.getElementById("minutes").innerText = minutes;
-    document.getElementById("secondes").innerText = secondes;
+    min = 24;
+    sec = 59;
 }
