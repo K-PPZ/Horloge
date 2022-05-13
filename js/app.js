@@ -13,7 +13,7 @@ const BarreCentre = [2, 3, 4, 5, 6, 8, 9];
 let MinutesHaut = document.getElementById("MinutesHaut");
 let MinutesBas = document.getElementById("MinutesBas");
 
-let SecondesHaut = document.getElementById("SecondesHaut").innerText = sec;
+let SecondesHaut = document.getElementById("SecondesHaut");
 let SecondesBas = document.getElementById("SecondesBas");
 
 if (BarreHaut) {
